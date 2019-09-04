@@ -1,7 +1,6 @@
 package myPackage;
 
 
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;
 
@@ -12,7 +11,7 @@ public class FtpConnection {
     private String host;
     private String path;
     private FTPClient client;
-
+    private Converter converter;
 
 
     // Create connection to ftp server. Pass host and path
@@ -20,7 +19,9 @@ public class FtpConnection {
         this.path = path;
         this.host = host;
 
+
         client = new FTPClient();
+        converter = new Converter();
 
         try {
             client.connect(this.host);
@@ -44,7 +45,7 @@ public class FtpConnection {
                     int yearOfFile = Integer.parseInt(file.getName());
                     // accessing each directory between 1900 and 2100
                     if (yearOfFile >1900 && yearOfFile < 2100 ) {
-                        accessEachDir(file);
+                          accessEachDir(file,yearOfFile);
                     }
                 }
             }
@@ -55,13 +56,13 @@ public class FtpConnection {
 
     }
 
-    public void accessEachDir(FTPFile file){
+    public void accessEachDir(FTPFile file, int year){
       try {
           FTPFile[] files = client.listFiles(path + file.getName() + "/");
           for (FTPFile eachFile : files){
               String fileName = eachFile.getName();
-              System.out.println(fileName);
-              //converter.inputToOutput(path+fileName+"/");
+              //System.out.println(fileName);
+              converter.inputToOutput(fileName, year);
 
 
           }

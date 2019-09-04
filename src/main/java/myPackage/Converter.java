@@ -4,27 +4,20 @@ import com.opencsv.CSVWriter;
 import org.apache.commons.net.ftp.FTPClient;
 
 import java.io.*;
-import java.net.URL;
 import java.util.Scanner;
 
 
 public class Converter {
 
-    private File input = new File("/home/michael/Documents/FTP-2-CSV/CRNS0101-05-2019-AK_Bethel_87_WNW.txt/");
     private CSVWriter writer;
     private FTPClient ftpClient;
-    private OutputStream os;
-    private String fileName;
     private InputStream is;
 
 
-    public Converter(String fileName){
-        //input = new File(pathToFile);
+    public Converter(){
         ftpClient  = new FTPClient();
-        this.fileName = fileName;
 
         try{
-            os = new FileOutputStream(fileName);
             ftpClient.connect("ftp.ncdc.noaa.gov");
             Boolean login = ftpClient.login("anonymous","");
 
@@ -35,19 +28,21 @@ public class Converter {
         }
     }
 
-    public void inputToOutput(){
+    public void inputToOutput(String fileName, int year){
         try{
-            ftpClient.changeWorkingDirectory("/pub/data/uscrn/products/subhourly01/2019/");
+            // change directory
+            ftpClient.changeWorkingDirectory("/pub/data/uscrn/products/subhourly01/"+year+"/");
+            // open input stream in the directory( listed above ).  and the fileName
             is = new BufferedInputStream(ftpClient.retrieveFileStream(fileName));
 
-            System.out.println(is);
 
+            // Covert from input stream to scanner
             Scanner scanner = new Scanner(is,"UTF-8");
 
             while(scanner.hasNext()){
                 String line = scanner.nextLine();
-                //System.out.println(line);
                 String[] arrayFromTxt = txtLineToCsv(line);
+
                 writer.writeNext(arrayFromTxt);
             }
             scanner.close();
