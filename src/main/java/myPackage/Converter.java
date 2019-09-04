@@ -3,9 +3,7 @@ package myPackage;
 import com.opencsv.CSVWriter;
 import org.apache.commons.net.ftp.FTPClient;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.util.Scanner;
 
@@ -15,17 +13,23 @@ public class Converter {
     private File input = new File("/home/michael/Documents/FTP-2-CSV/CRNS0101-05-2019-AK_Bethel_87_WNW.txt/");
     private CSVWriter writer;
     private FTPClient ftpClient;
+    private OutputStream os;
+    private String fileName;
+    private InputStream is;
 
-    public Converter(){
+
+    public Converter(String fileName){
         //input = new File(pathToFile);
         ftpClient  = new FTPClient();
+        this.fileName = fileName;
 
         try{
+            os = new FileOutputStream(fileName);
+            ftpClient.connect("ftp.ncdc.noaa.gov");
+            Boolean login = ftpClient.login("anonymous","");
 
-         ftpClient.connect("ftp.ncdc.noaa.gov");
-         ftpClient.login("anonymous","");
-
-         writer = new CSVWriter(new FileWriter("myfile.csv"));
+            System.out.println("Login: " + login);
+            writer = new CSVWriter(new FileWriter("myfile.csv"));
         }catch (IOException e){
             e.printStackTrace();
         }
@@ -33,21 +37,20 @@ public class Converter {
 
     public void inputToOutput(){
         try{
+            ftpClient.changeWorkingDirectory("/pub/data/uscrn/products/subhourly01/2019/");
+            is = new BufferedInputStream(ftpClient.retrieveFileStream(fileName));
 
-            Scanner sc = new Scanner(input);
+            System.out.println(is);
 
+            Scanner scanner = new Scanner(is,"UTF-8");
 
-            //String line = sc.nextLine();
-            //System.out.println(line);
-
-
-            while(sc.hasNext()){
-                String line = sc.nextLine();
-                System.out.println(line);
+            while(scanner.hasNext()){
+                String line = scanner.nextLine();
+                //System.out.println(line);
                 String[] arrayFromTxt = txtLineToCsv(line);
                 writer.writeNext(arrayFromTxt);
             }
-            writer.close();
+            scanner.close();
         }catch(IOException e){
             e.printStackTrace();
         }
@@ -76,4 +79,6 @@ public class Converter {
 
         return arrayFromLine;
     }
+
+
 }

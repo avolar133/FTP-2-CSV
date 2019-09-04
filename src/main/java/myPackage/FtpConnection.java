@@ -6,7 +6,6 @@ import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;
 
 import java.io.IOException;
-import java.net.SocketException;
 
 public class FtpConnection {
 
@@ -14,7 +13,7 @@ public class FtpConnection {
     private String path;
     private FTPClient client;
 
-    Converter converter;
+
 
     // Create connection to ftp server. Pass host and path
     public FtpConnection(String host, String path){
@@ -22,12 +21,12 @@ public class FtpConnection {
         this.host = host;
 
         client = new FTPClient();
-        converter = new Converter();
+
         try {
             client.connect(this.host);
             Boolean login = client.login("anonymous", "");
             // what should I do if login returns false?
-            System.out.println(login);
+            System.out.println("Login: " + login);
         }catch (IOException e){
             e.printStackTrace();
         }
@@ -70,4 +69,7 @@ public class FtpConnection {
           e.printStackTrace();
       }
     }
+
+
+
 }
