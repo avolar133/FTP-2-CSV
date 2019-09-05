@@ -45,6 +45,7 @@ public class FtpConnection {
                     int yearOfFile = Integer.parseInt(file.getName());
                     // accessing each directory between 1900 and 2100
                     if (yearOfFile >1900 && yearOfFile < 2100 ) {
+                        System.out.println("Year of file: " + yearOfFile);
                           accessEachDir(file,yearOfFile);
                     }
                 }
