@@ -6,9 +6,13 @@ import java.util.TreeMap;
 public class LineFormat {
 
     private Map<Variables,String> valuesMap;
+    private String[] arrayFromLine;
 
     public LineFormat(String line){
+
         valuesMap = new TreeMap();
+
+        arrayFromLine = new String[23];
 
         //Delete duplicate spaces
         line = line.trim().replaceAll(" +"," ");
@@ -32,6 +36,7 @@ public class LineFormat {
     }
 
     private void validation(){
+        int indexForArray = 0;
         for (Map.Entry<Variables, String> entry : valuesMap.entrySet()){
             //System.out.println( entry.getKey() + " : " + entry.getValue());
             Variables key = entry.getKey();
@@ -81,7 +86,11 @@ public class LineFormat {
                     break;
             }
 
+            arrayFromLine[indexForArray] = valuesMap.get(key);
+            indexForArray++;
+
         }
+
     }
 
     private String splitTime(String toSplitString){
@@ -108,6 +117,10 @@ public class LineFormat {
         return true;
     }
 
+
+    public String[] getArrayFromLine(){
+        return arrayFromLine;
+    }
 
     public void printMap(){
         for (Map.Entry<Variables, String> entry : valuesMap.entrySet()) {

@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/myPackage/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myPackage/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/myPackage/FtpConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myPackage/FtpConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myPackage/LineFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myPackage/LineFormat.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -31,20 +32,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/myPackage/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+            <state relative-caret-position="108">
+              <caret line="6" column="71" selection-start-line="6" selection-start-column="71" selection-end-line="6" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/myPackage/FtpConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="61" column="74" lean-forward="true" selection-start-line="61" selection-start-column="74" selection-end-line="61" selection-end-column="74" />
+            <state relative-caret-position="419">
+              <caret line="117" column="52" selection-start-line="117" selection-start-column="52" selection-end-line="117" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/myPackage/Converter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="71" column="13" lean-forward="true" selection-start-line="64" selection-start-column="12" selection-end-line="71" selection-end-column="13" />
+            <state relative-caret-position="648">
+              <caret line="45" column="22" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,10 +68,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/myPackage/LineFormat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="962">
-              <caret line="78" column="60" selection-start-line="78" selection-start-column="60" selection-end-line="78" selection-end-column="60" />
+            <state relative-caret-position="550">
+              <caret line="121" column="29" selection-start-line="121" selection-start-column="29" selection-end-line="121" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3633#3634#0" expanded="true" />
+                <element signature="e#3668#3669#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -99,6 +102,7 @@
     <findStrings>
       <find>print</find>
       <find>println</find>
+      <find>writer</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -114,11 +118,11 @@
         <option value="$PROJECT_DIR$/src/main/java/myPackage/convert.java" />
         <option value="$PROJECT_DIR$/src/main/java/myPackage/MissingData.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/myPackage/Converter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/myPackage/FtpConnection.java" />
         <option value="$PROJECT_DIR$/src/main/java/myPackage/Variables.java" />
-        <option value="$PROJECT_DIR$/src/main/java/myPackage/LineFormat.java" />
+        <option value="$PROJECT_DIR$/src/main/java/myPackage/Converter.java" />
         <option value="$PROJECT_DIR$/src/main/java/myPackage/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/myPackage/LineFormat.java" />
+        <option value="$PROJECT_DIR$/src/main/java/myPackage/FtpConnection.java" />
       </list>
     </option>
   </component>
@@ -130,10 +134,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="376" />
-    <option name="y" value="251" />
-    <option name="width" value="960" />
-    <option name="height" value="810" />
+    <option name="x" value="65" />
+    <option name="y" value="32" />
+    <option name="width" value="928" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -244,7 +248,7 @@
       <updated>1567436261501</updated>
       <workItem from="1567436265395" duration="29911000" />
       <workItem from="1567583554489" duration="9213000" />
-      <workItem from="1567673171241" duration="10232000" />
+      <workItem from="1567673171241" duration="18141000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit. &#10;Converter class converts txt file &quot;CRN... .txt&quot; to csv.&#10;With FtpConnection establish connection to ftp server and print all necessary files.">
       <created>1567543343134</created>
@@ -267,11 +271,18 @@
       <option name="project" value="LOCAL" />
       <updated>1567591962997</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Line format class and enum class added.">
+      <created>1567687099001</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1567687099001</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49356000" />
+    <option name="totallyTimeSpent" value="57265000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="32" width="1855" height="1048" extended-state="6" />
@@ -282,11 +293,11 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" sideWeight="0.5021521" side_tool="true" weight="0.26609442" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4978479" visible="true" weight="0.2795998" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4978479" weight="0.57683486" />
       <window_info id="Structure" order="6" sideWeight="0.5021521" side_tool="true" weight="0.26609442" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290461" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4869372" visible="true" weight="0.2625139" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48471373" weight="0.1112347" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -295,8 +306,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.51306283" side_tool="true" visible="true" weight="0.2625139" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.48749304" weight="0.32814237" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.51528627" side_tool="true" weight="0.2625139" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4852696" weight="0.32814237" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -346,7 +357,8 @@
     <MESSAGE value="First Commit. &#10;Converter class converts txt file &quot;CRN... .txt&quot; to csv.&#10;With FtpConnection establish connection to ftp server and print all necessary files." />
     <MESSAGE value="Function inputToOutput reads direct from server" />
     <MESSAGE value="Reads the first year, but after then nothing happens. The Programme keep running." />
-    <option name="LAST_COMMIT_MESSAGE" value="Reads the first year, but after then nothing happens. The Programme keep running." />
+    <MESSAGE value="Line format class and enum class added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Line format class and enum class added." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/FTP-2-CSV.iml">
@@ -377,16 +389,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/myPackage/FtpConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="61" column="74" lean-forward="true" selection-start-line="61" selection-start-column="74" selection-end-line="61" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/myPackage/Variables.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -394,30 +396,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/myPackage/LineFormat.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/myPackage/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="962">
-          <caret line="78" column="60" selection-start-line="78" selection-start-column="60" selection-end-line="78" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="108">
+          <caret line="6" column="71" selection-start-line="6" selection-start-column="71" selection-end-line="6" selection-end-column="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/myPackage/Converter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="71" column="13" lean-forward="true" selection-start-line="64" selection-start-column="12" selection-end-line="71" selection-end-column="13" />
+        <state relative-caret-position="648">
+          <caret line="45" column="22" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/myPackage/App.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/myPackage/LineFormat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        <state relative-caret-position="550">
+          <caret line="121" column="29" selection-start-line="121" selection-start-column="29" selection-end-line="121" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3633#3634#0" expanded="true" />
+            <element signature="e#3668#3669#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/myPackage/FtpConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="117" column="52" selection-start-line="117" selection-start-column="52" selection-end-line="117" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
