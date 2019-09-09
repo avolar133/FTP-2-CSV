@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5574f00-d6c1-4dfd-ace6-5b4076f0487e" name="Default Changelist" comment="Test added.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/myPackage/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/LineFormatTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/PersonTest.java" afterDir="false" />
+    <list default="true" id="d5574f00-d6c1-4dfd-ace6-5b4076f0487e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/myPackage/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myPackage/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/myPackage/Converter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/myPackage/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myPackage/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/myPackage/Converter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myPackage/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LineFormatTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LineFormatTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PersonTest.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,38 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/myPackage/Person.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="19" />
-              <folding>
-                <element signature="e#215#216#0" expanded="true" />
-                <element signature="e#242#243#0" expanded="true" />
-                <element signature="e#269#270#0" expanded="true" />
-                <element signature="e#295#296#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/PersonTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/LineFormatTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="433">
+              <caret line="88" column="50" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,7 +48,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/myPackage/LineFormat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2142">
+            <state relative-caret-position="397">
               <caret line="121" column="29" selection-start-line="121" selection-start-column="29" selection-end-line="121" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -91,8 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/myPackage/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="9" selection-start-line="13" selection-end-line="14" />
+            <state relative-caret-position="360">
+              <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -132,8 +101,8 @@
         <option value="$PROJECT_DIR$/src/main/java/myPackage/FtpConnection.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/myPackage/Person.java" />
-        <option value="$PROJECT_DIR$/src/main/java/myPackage/App.java" />
         <option value="$PROJECT_DIR$/src/test/java/PersonTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/myPackage/App.java" />
         <option value="$PROJECT_DIR$/src/test/java/LineFormatTest.java" />
       </list>
     </option>
@@ -174,6 +143,40 @@
             <path>
               <item name="converttocsv" type="b2602c69:ProjectViewProjectNode" />
               <item name="FTP-2-CSV" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="converttocsv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FTP-2-CSV" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="converttocsv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FTP-2-CSV" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="myPackage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="converttocsv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FTP-2-CSV" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="converttocsv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FTP-2-CSV" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="converttocsv" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FTP-2-CSV" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -207,7 +210,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LineFormatTest">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="myPackage.App" />
       <module name="FTP-2-CSV" />
@@ -241,9 +244,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.LineFormatTest" />
         <item itemvalue="JUnit.PersonTest" />
-        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -261,7 +264,7 @@
       <workItem from="1567583554489" duration="9213000" />
       <workItem from="1567673171241" duration="18396000" />
       <workItem from="1567943616675" duration="5864000" />
-      <workItem from="1568029424711" duration="872000" />
+      <workItem from="1568029424711" duration="2928000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit. &#10;Converter class converts txt file &quot;CRN... .txt&quot; to csv.&#10;With FtpConnection establish connection to ftp server and print all necessary files.">
       <created>1567543343134</created>
@@ -298,16 +301,17 @@
       <option name="project" value="LOCAL" />
       <updated>1567771263305</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Test added.">
+      <created>1568030306949</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1568030306949</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PersonTest - 2019.09.08 at 16h 58m 34s.xml">
-      <configuration name="PersonTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LineFormatTest - 2019.09.08 at 16h 59m 03s.xml">
-      <configuration name="LineFormatTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LineFormatTest - 2019.09.08 at 17h 00m 11s.xml">
       <configuration name="LineFormatTest" configurationId="JUnit" />
     </history-entry>
@@ -332,9 +336,15 @@
     <history-entry file="LineFormatTest - 2019.09.08 at 17h 16m 56s.xml">
       <configuration name="LineFormatTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="LineFormatTest - 2019.09.09 at 14h 12m 24s.xml">
+      <configuration name="LineFormatTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LineFormatTest - 2019.09.09 at 14h 12m 59s.xml">
+      <configuration name="LineFormatTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64256000" />
+    <option name="totallyTimeSpent" value="66312000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="32" width="1855" height="1048" extended-state="6" />
@@ -344,7 +354,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" sideWeight="0.5021521" side_tool="true" weight="0.26609442" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.4978479" visible="true" weight="0.209005" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.4978479" visible="true" weight="0.209005" />
       <window_info id="Structure" order="6" sideWeight="0.5021521" side_tool="true" weight="0.26609442" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32814237" />
@@ -358,7 +368,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.51528627" side_tool="true" weight="0.2625139" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4852696" visible="true" weight="0.32814237" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4852696" weight="0.32814237" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -484,9 +494,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/myPackage/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/myPackage/LineFormat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2142">
+        <state relative-caret-position="397">
           <caret line="121" column="29" selection-start-line="121" selection-start-column="29" selection-end-line="121" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -494,17 +511,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/myPackage/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="9" selection-start-line="13" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/LineFormatTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="433">
+          <caret line="88" column="50" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
