@@ -1,0 +1,10 @@
+# do not add ide files
+.idea/
+.settings/
+*.iml
+.project
+.classpath
+
+# build files
+**/target/
+/out/
