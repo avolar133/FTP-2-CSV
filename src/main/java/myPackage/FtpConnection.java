@@ -56,6 +56,10 @@ public class FtpConnection {
             //initialize new file.
             csvWriter = new CSVWriter(new FileWriter("output.csv"));
 
+            //Add header.
+            String[] arrayOfHeaders = this.enumVariablesToArray();
+            csvWriter.writeNext(arrayOfHeaders);
+
             //Save all files that located in the path
             FTPFile[] files = client.listFiles(path);
             //Iterate through all files
@@ -122,6 +126,18 @@ public class FtpConnection {
         }catch (IOException e){
             e.printStackTrace();
         }
+    }
+
+    public String[] enumVariablesToArray(){
+        String[] arrayOfHeaders = new String[23];
+        int index = 0;
+
+        for (Variables variable: Variables.values()){
+            arrayOfHeaders[index] = variable.toString();
+            index++;
+        }
+
+        return  arrayOfHeaders;
     }
 
 
