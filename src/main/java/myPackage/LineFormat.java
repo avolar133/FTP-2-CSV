@@ -5,92 +5,76 @@ import java.util.TreeMap;
 
 public class LineFormat {
 
-    private Map<Variables,String> valuesMap;
-    private String[] arrayFromLine;
+    private String[] arrayFromLine ;
 
     public LineFormat(String line){
 
-        valuesMap = new TreeMap();
 
         arrayFromLine = new String[23];
 
         //Delete duplicate spaces
         line = line.trim().replaceAll(" +"," ");
         //cut the string and store into array
-        String[] arrayFromLine = line.split(" ");
+        arrayFromLine = line.split(" ");
         int sizeOfVariables = Variables.values().length;
 
         if (sizeOfVariables != arrayFromLine.length){
-            throw new IllegalArgumentException("The line size is not correct");
+            throw new IllegalArgumentException("The line size is incorrect");
         }
 
-        int i = 0;
-        for (Variables variable : Variables.values()) {
+        this.modifiyArray();
+    }
 
-            valuesMap.put(variable, arrayFromLine[i]);
+
+    private void modifiyArray(){
+
+        int i = 0;
+        for(Variables variable : Variables.values()){
+            arrayFromLine[i] = this.validation(variable,arrayFromLine[i]);
             i++;
         }
 
-        validation();
-
     }
 
-    private void validation(){
-        int indexForArray = 0;
-        for (Map.Entry<Variables, String> entry : valuesMap.entrySet()){
-            //System.out.println( entry.getKey() + " : " + entry.getValue());
-            Variables key = entry.getKey();
-            String value = entry.getValue();
+    private String validation(Variables variable, String valueOfHeader){
 
-            if (value.equals("-99999")||
-                    value.equals("-9999.0") ||
-                    value.equals("-9999") ||
-                    value.equals("-99.000") ||
-                    value.equals("-99.00")
-            ){
-                valuesMap.replace(key,"");
+        boolean testRequired = variable.isTestRequired();
+        if (testRequired){
+            switch (variable){
+                case AIR_TEMPERATURE: case PRECIPITATION: case SURFACE_TEMPERATURE:
+                case SOIL_MOISTURE_5: case SOIL_TEMPERATURE_5:
+                    String[] noDataValuesSeven = {"-999999","-9999.0","-999.00","-99.000"};
+                    for (String data: noDataValuesSeven){
+                        if (valueOfHeader.equals(data)){
+                            return "";
+                        }
+                    }
+                    return valueOfHeader;
+                case SOLAR_RADIATION: case WIND_1_5:
+                    String[] noDataValuesSix = {"-99999","-999.0","-99.00"};
+                    for (String data: noDataValuesSix){
+                        if (valueOfHeader.equals(data)){
+                            return "";
+                        }
+                    }
+                    return valueOfHeader;
+                case RELATIVE_HUMIDITY: case WETNESS:
+                    String[] noDataValuesFive = {"-9999","-99.0"};
+                    for (String data: noDataValuesFive){
+                        if (valueOfHeader.equals(data)){
+                            return "";
+                        }
+                    }
+                    return valueOfHeader;
             }
-
-            //System.out.println( entry.getKey() + " : " + entry.getValue());
-
-            switch (key){
-                case UTC_TIME:
-                    valuesMap.replace(key,splitTime(value));
-                    break;
-                case LST_TIME:
-                    valuesMap.replace(key,splitTime(value));
-                case SR_FLAG:
-                    if(!handleFlags(value)){
-                        valuesMap.replace(Variables.SOLAR_RADIATION, "");
-                    }
-                    break;
-                case ST_FLAG:
-                    if(!handleFlags(value)){
-                        valuesMap.replace(Variables.SURFACE_TEMPERATURE, "");
-                    }
-                    break;
-                case RH_FLAG:
-                    if(!handleFlags(value)){
-                        valuesMap.replace(Variables.RELATIVE_HUMIDITY, "");
-                    }
-                    break;
-                case WET_FLAG:
-                    if(!handleFlags(value)){
-                        valuesMap.replace(Variables.WETNESS, "");
-                    }
-                    break;
-                case WIND_FLAG:
-                    if(!handleFlags(value)){
-                        valuesMap.replace(Variables.WIND_1_5, "");
-                    }
-                    break;
-            }
-
-            arrayFromLine[indexForArray] = valuesMap.get(key);
-            indexForArray++;
-
         }
 
+        switch (variable){
+            case UTC_TIME: case LST_TIME:
+                return splitTime(valueOfHeader);
+        }
+
+        return valueOfHeader;
     }
 
     private String splitTime(String toSplitString){
@@ -117,15 +101,7 @@ public class LineFormat {
         return true;
     }
 
-
-    public String[] getArrayFromLine(){
+    public String[] getArrayFromLine() {
         return arrayFromLine;
     }
-
-    public void printMap(){
-        for (Map.Entry<Variables, String> entry : valuesMap.entrySet()) {
-            System.out.println( entry.getKey() + " : " + entry.getValue());
-        }
-    }
-
 }

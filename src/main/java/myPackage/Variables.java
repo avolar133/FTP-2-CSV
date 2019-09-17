@@ -20,7 +20,7 @@ public enum Variables {
     RH_FLAG(false),
     SOIL_MOISTURE_5(true),
     SOIL_TEMPERATURE_5(true),
-    WETNESS(false),
+    WETNESS(true),
     WET_FLAG(false),
     WIND_1_5(true),
     WIND_FLAG(false);
