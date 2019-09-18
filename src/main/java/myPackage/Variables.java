@@ -1,38 +1,57 @@
 package myPackage;
 
 public enum Variables {
-    WBANNO(false),
-    UTC_DATE(false),
-    UTC_TIME(false),
-    LST_DATE(false),
-    LST_TIME(false),
-    CRX_VN(false),
-    LONGITUDE(false),
-    LATITUDE(false),
-    AIR_TEMPERATURE(true),
-    PRECIPITATION(true),
-    SOLAR_RADIATION(true),
-    SR_FLAG(false),
-    SURFACE_TEMPERATURE(true),
-    ST_TYPE(false),
-    ST_FLAG(false),
-    RELATIVE_HUMIDITY(true),
-    RH_FLAG(false),
-    SOIL_MOISTURE_5(true),
-    SOIL_TEMPERATURE_5(true),
-    WETNESS(true),
-    WET_FLAG(false),
-    WIND_1_5(true),
-    WIND_FLAG(false);
+    WBANNO(null),
+    UTC_DATE(null),
+    UTC_TIME(null),
+    LST_DATE(null),
+    LST_TIME(null),
+    CRX_VN(null),
+    LONGITUDE(null),
+    LATITUDE(null),
+    AIR_TEMPERATURE("-9999.0"),
+    PRECIPITATION("-9999.0"),
+    SOLAR_RADIATION("-99999"),
+    SR_FLAG(null),
+    SURFACE_TEMPERATURE("-9999.0"),
+    ST_TYPE(null),
+    ST_FLAG(null),
+    RELATIVE_HUMIDITY("-9999"),
+    RH_FLAG(null),
+    SOIL_MOISTURE_5("-99.000"),
+    SOIL_TEMPERATURE_5("-9999.0"),
+    WETNESS("-9999"),
+    WET_FLAG(null),
+    WIND_1_5("-99.00"),
+    WIND_FLAG(null);
 
 
-    private boolean testRequired;
+    private final String noData;
 
-    Variables(boolean testRequired){
-        this.testRequired = testRequired;
+    Variables(String noData) {
+        this.noData = noData;
     }
 
-    public boolean isTestRequired() {
-        return testRequired;
+    public String filterNoData(String examinationValue){
+        if (!(noData==null) && this.noData.equals(examinationValue)){
+            return "";
+        }else if(this.toString().equals("UTC_TIME") || this.toString().equals("LST_TIME")){
+            return this.modifyTime(examinationValue);
+        }
+
+
+        return examinationValue;
+
     }
+
+    private String modifyTime(String notModifiedTime){
+        String[] hoursAndMinuts = new String[2];
+        hoursAndMinuts[0] =  notModifiedTime.substring(0,2);
+        hoursAndMinuts[1] = notModifiedTime.substring(2);
+
+
+        return hoursAndMinuts[0] + ":" + hoursAndMinuts[1];
+    }
+
+
 }
